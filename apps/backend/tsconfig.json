@@ -5,7 +5,11 @@
     "module": "commonjs",
     "target": "ES6",
     "composite": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"]
   },
   "references": [
     { "path": "../../common/db" }
