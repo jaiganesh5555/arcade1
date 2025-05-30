@@ -34,7 +34,8 @@
     "packageManager": "npm@9.8.1",
     "workspaces": [
         "apps/*",
-        "packages/*"
+        "packages/*",
+        "common/*"
     ],
     "dependencies": {
         "@aws-sdk/client-s3": "^3.820.0",

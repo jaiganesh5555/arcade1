@@ -30,7 +30,7 @@ const port = process.env.PORT || 3002;
 
 // Enable CORS and JSON parsing
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://arcade-web-two.vercel.app/',
+  origin: process.env.FRONTEND_URL || 'https://arcade1-web-rtr6.vercel.app/',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']

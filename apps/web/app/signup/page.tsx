@@ -55,7 +55,7 @@ export default function SignupPage() {
           headers: {
             'Content-Type': 'application/json',
             'Accept': '*/*',
-            'Origin': 'https://arcade-web-two.vercel.app/'
+            'Origin': 'https://arcade1-web-rtr6.vercel.app/'
           }
         }
       )
