@@ -2,7 +2,7 @@
     "name": "arcadeclone1",
     "private": true,
     "scripts": {
-        "build": "rimraf node_modules/.prisma common/db/dist && cd common/db && npx prisma generate --schema=./prisma/schema.prisma && tsc && cd ../.. && tsc -b",
+        "build": "echo '🚀 Starting build...' && rimraf node_modules/.prisma common/db/dist && echo '🧹 Cleaned old files' && cd common/db && echo '📂 Changed to db directory' && echo '🔧 Generating Prisma client...' && npx prisma generate --schema=./prisma/schema.prisma && echo '✅ Prisma client generated' && echo '🔨 Building TypeScript...' && tsc && echo '✅ TypeScript built' && cd ../.. && echo '📂 Back to root' && tsc -b && echo '🎉 Build complete!'",
         "dev": "turbo run dev",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
