@@ -3,8 +3,8 @@
     "version": "1.0.0",
     "main": "dist/index.js",
     "scripts": {
-        "prisma:generate": "cd ../../common/db && npm install && npm run prisma:generate",
-        "build": "npm run prisma:generate && tsc",
+        "postinstall": "npm --prefix ../../common/db install && npm --prefix ../../common/db run prisma:generate",
+        "build": "tsc",
         "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
         "start": "node dist/index.js",
         "lint": "eslint .",
@@ -19,7 +19,7 @@
         "@types/jsonwebtoken": "^9.0.5",
         "@types/multer": "^1.4.11",
         "@types/node": "^20.11.19",
-        "prisma": "^6.8.2",
+        "prisma": "^5.10.2",
         "rimraf": "^5.0.5",
         "ts-node-dev": "^2.0.0",
         "typescript": "^5.3.3"

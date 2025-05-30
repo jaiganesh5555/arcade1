@@ -6,12 +6,11 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "./node_modules/.prisma/client"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:../dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -37,14 +36,14 @@ model Demo {
   userId      String
   user        User     @relation(fields: [userId], references: [id])
   url         String?
-  isPublic    Boolean @default(false)
+  isPublic    Boolean  @default(false)
 }
 
 model Tour {
-  id          String   @id @default(uuid())
-  title       String
-  type        String?
-  views       Int?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        String   @id @default(uuid())
+  title     String
+  type      String?
+  views     Int?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 } 
