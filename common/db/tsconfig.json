@@ -1,11 +1,14 @@
 {
-  "extends": "../../packages/typescript-config/base.json",
   "compilerOptions": {
-    "composite": true,
-    "incremental": true,
-    "outDir": "./dist",
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "dist",
     "rootDir": ".",
+    "composite": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "incremental": true,
     "tsBuildInfoFile": "./node_modules/.tsbuildinfo"
   },
-  "include": ["index.ts", "prisma/schema.prisma"]
+  "include": ["**/*.ts", "prisma/schema.prisma"]
 } 

@@ -4,6 +4,9 @@
     /* Project-specific options */
     "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
     "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    "composite": true,
+    "declaration": true,
+    "incremental": true,
     "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     "removeComments": true,                           /* Disable emitting comments. */
     "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
