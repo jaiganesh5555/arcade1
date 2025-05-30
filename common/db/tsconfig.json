@@ -1,0 +1,11 @@
+{
+  "extends": "../../packages/typescript-config/base.json",
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "tsBuildInfoFile": "./node_modules/.tsbuildinfo"
+  },
+  "include": ["index.ts", "prisma/schema.prisma"]
+} 
