@@ -2,7 +2,7 @@
     "name": "arcadeclone1",
     "private": true,
     "scripts": {
-        "build": "npx prisma generate && tsc -b",
+        "build": "rm -rf node_modules/.prisma common/db/dist && npm install && npx prisma generate && tsc -b",
         "dev": "turbo run dev",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",

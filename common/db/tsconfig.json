@@ -8,8 +8,9 @@
     "declaration": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": ["**/*.ts"],
+  "include": ["index.ts", "prisma/generated"],
   "exclude": ["node_modules", "dist", ".prisma"]
 } 
