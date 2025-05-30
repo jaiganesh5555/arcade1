@@ -3,7 +3,7 @@ import * as jwt from 'jsonwebtoken';
 import { JWT_SECRET } from './config';
 import { z as zod } from 'zod';
 import cors from 'cors';
-import prisma from 'db';  // Ensure this is the correct path to your Prisma client
+import prisma from 'common-db';  // Updated to use the correct package name
 import multer from 'multer';
 import { S3Client, PutObjectCommand, GetObjectCommand, ListObjectsV2Command, CreateBucketCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
