@@ -26,6 +26,10 @@ coverage
 out/
 build
 
+# Prisma
+.prisma
+node_modules/.prisma
+
 # Debug
 npm-debug.log*
 yarn-debug.log*
