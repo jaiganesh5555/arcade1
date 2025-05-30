@@ -56,8 +56,9 @@ export default function FileUploader() {
     setFiles(prev => prev.filter((_, i) => i !== index));
     setPreviewUrls(prev => {
       const newUrls = [...prev];
-      if (newUrls[index]) {
-        URL.revokeObjectURL(newUrls[index]);
+      const url = newUrls[index];
+      if (typeof url === 'string') {
+        URL.revokeObjectURL(url);
       }
       return newUrls.filter((_, i) => i !== index);
     });
