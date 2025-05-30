@@ -2,7 +2,7 @@
     "name": "arcadeclone1",
     "private": true,
     "scripts": {
-        "build": "rm -rf node_modules/.prisma common/db/dist && cd common/db && npx prisma generate && tsc && cd ../../apps/backend && tsc",
+        "build": "rimraf node_modules/.prisma common/db/dist && cd common/db && npx prisma generate && tsc && cd ../../apps/backend && tsc",
         "dev": "turbo run dev",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
