@@ -195,7 +195,7 @@ export default function FileUploader() {
                   <div className="aspect-square relative rounded-lg overflow-hidden">
                     {previewUrls[index] && (
                       <Image
-                        src={previewUrls[index]}
+                        src={previewUrls[index]!}
                         alt={file.name}
                         fill
                         className="object-cover"
