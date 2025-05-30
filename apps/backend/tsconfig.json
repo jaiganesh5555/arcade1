@@ -1,5 +1,5 @@
 {
-  "extends": "../../packages/typescript-config/base.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
     /* Project-specific options */
     "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
@@ -15,13 +15,11 @@
     "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
     "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
     "resolveJsonModule": true,                        /* Enable importing .json files. */
-
-    /* Other options you might want to keep or review */
-    // "allowJs": true,
-    // "checkJs": true,
-    // "allowSyntheticDefaultImports": true, // Already covered by esModuleInterop in base
-    // "esModuleInterop": true, // Already covered by base
-    // "skipLibCheck": true // Already covered by base
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "target": "ES2020",
+    "module": "commonjs"
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"],

@@ -10,5 +10,5 @@
     "incremental": true,
     "tsBuildInfoFile": "./node_modules/.tsbuildinfo"
   },
-  "include": ["**/*.ts", "prisma/schema.prisma"]
+  "include": ["**/*.ts"]
 } 

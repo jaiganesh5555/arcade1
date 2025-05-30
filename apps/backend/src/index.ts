@@ -1,5 +1,5 @@
 import express, { Request, Response, NextFunction } from 'express';
-import jwt from 'jsonwebtoken';
+import * as jwt from 'jsonwebtoken';
 import { JWT_SECRET } from './config';
 import { z as zod } from 'zod';
 import cors from 'cors';
@@ -8,7 +8,7 @@ import multer from 'multer';
 import { S3Client, PutObjectCommand, GetObjectCommand, ListObjectsV2Command, CreateBucketCommand } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { v4 as uuidv4 } from 'uuid';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import { NodeHttpHandler } from "@aws-sdk/node-http-handler";
 dotenv.config();
 
