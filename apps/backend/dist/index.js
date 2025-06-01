@@ -63,7 +63,7 @@ const app = (0, express_1.default)();
 const port = process.env.PORT || 3002;
 // Enable CORS and JSON parsing
 app.use((0, cors_1.default)({
-    origin: process.env.FRONTEND_URL || 'https://arcade1-web-rtr6.vercel.app/',
+    origin: process.env.NODE_ENV === 'development' ? 'http://localhost:*' : 'http://localhost:3000',
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
@@ -584,3 +584,4 @@ app.get('/api/health', (_req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+//# sourceMappingURL=index.js.map

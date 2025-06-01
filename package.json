@@ -2,7 +2,7 @@
     "name": "arcadeclone1",
     "private": true,
     "scripts": {
-        "build": "npm install && npm --prefix ./common/db run prisma:generate && npm --prefix ./apps/backend run build",
+        "build": "npm run build",
         "dev": "turbo run dev",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
@@ -12,7 +12,7 @@
         "prisma:generate": "turbo run prisma:generate",
         "prisma:push": "turbo run prisma:push",
         "prisma:studio": "turbo run prisma:studio",
-        "start": "turbo run start --scope=backend --no-deps --no-cache"
+        "start": "npm run dev"
     },
     "devDependencies": {
         "@repo/eslint-config": "workspace:*",
