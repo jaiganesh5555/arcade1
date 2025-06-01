@@ -23,7 +23,7 @@
             "outputs": ["node_modules/.prisma/client/**"]
         },
         "backend#build": {
-            "dependsOn": ["db#prisma:generate", "^build"],
+            "dependsOn": ["^build"],
             "inputs": ["$TURBO_DEFAULT$", ".env*"],
             "outputs": ["dist/**"]
         },
