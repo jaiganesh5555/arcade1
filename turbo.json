@@ -17,13 +17,13 @@
             "cache": false,
             "persistent": true
         },
-        "db#prisma:generate": {
+        "common-db#prisma:generate": {
             "cache": false,
             "inputs": ["prisma/schema.prisma", "package.json"],
             "outputs": ["node_modules/.prisma/client/**"]
         },
         "backend#build": {
-            "dependsOn": ["^build"],
+            "dependsOn": ["common-db#prisma:generate", "^build"],
             "inputs": ["$TURBO_DEFAULT$", ".env*"],
             "outputs": ["dist/**"]
         },
