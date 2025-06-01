@@ -11,7 +11,8 @@
         "clean:all": "turbo run clean && rimraf node_modules",
         "prisma:generate": "turbo run prisma:generate",
         "prisma:push": "turbo run prisma:push",
-        "prisma:studio": "turbo run prisma:studio"
+        "prisma:studio": "turbo run prisma:studio",
+        "start": "turbo run start --scope=backend --no-deps --no-cache"
     },
     "devDependencies": {
         "@repo/eslint-config": "workspace:*",
@@ -20,6 +21,7 @@
         "@types/express": "4.17.21",
         "@types/jsonwebtoken": "9.0.5",
         "@types/jszip": "^3.4.0",
+        "@types/node": "^22.15.29",
         "@types/uuid": "^10.0.0",
         "eslint": "^8.57.0",
         "prettier": "^3.2.5",
