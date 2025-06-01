@@ -30,7 +30,7 @@ const port = process.env.PORT || 3002;
 
 // Enable CORS and JSON parsing
 app.use(cors({
-  origin: process.env.FRONTEND_URL || 'https://arcade1-web-rtr6.vercel.app/',
+  origin: process.env.NODE_ENV === 'development' ? 'http://localhost:*' : 'http://localhost:3000',
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
@@ -204,23 +204,23 @@ app.post('/api/auth/login', async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
 
-    const user = await prisma.user.findUnique({
+      const user = await prisma.user.findUnique({
       where: { email },
-      select: {
-        id: true,
-        email: true,
-        password: true
-      }
-    });
-
-    if (!user || user.password !== password) {
-      return res.status(401).json({
-        message: "Invalid email or password"
+        select: {
+          id: true,
+          email: true,
+          password: true
+        }
       });
-    }
 
-    const token = jwt.sign({ userId: user.id }, JWT_SECRET);
-    return res.json({ token });
+      if (!user || user.password !== password) {
+        return res.status(401).json({
+          message: "Invalid email or password"
+        });
+      }
+
+      const token = jwt.sign({ userId: user.id }, JWT_SECRET);
+      return res.json({ token });
   } catch (error) {
     console.error('Login error:', error);
     return res.status(500).json({

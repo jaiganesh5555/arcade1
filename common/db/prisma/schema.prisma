@@ -47,4 +47,4 @@ model Tour {
   views     Int?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-} 
+}

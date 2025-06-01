@@ -24,7 +24,7 @@ export default function LoginPage() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('/api/auth/login', {
+      const response = await axios.post('http://localhost:3002/api/auth/login', {
         email,
         password
       });
@@ -36,7 +36,7 @@ export default function LoginPage() {
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
       
       toast.success('Login successful!');
-      router.push('/upload');
+      router.push('/dashboard');
     } catch (error: any) {
       console.error('Login error:', error);
       toast.error(error.response?.data?.message || 'Login failed');
